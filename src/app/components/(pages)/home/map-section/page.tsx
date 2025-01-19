@@ -1,4 +1,4 @@
-import ButtonWhastApp from "../../../button/page";
+import ButtonWhastApp from "../../../button-whatsapp/page";
 
 const MapWithWhatsApp = () => {
   return (

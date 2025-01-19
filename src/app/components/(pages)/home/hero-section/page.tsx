@@ -1,5 +1,5 @@
 import Image from "next/image";
-import ButtonWhastApp from "../button/page";
+import ButtonWhastApp from "../../../button/page";
 
 const HeroSection = () => {
   return (

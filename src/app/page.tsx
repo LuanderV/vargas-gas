@@ -1,7 +1,7 @@
-import HeroSection from "./components/hero-section/page";
-import StatsSection from "./components/stats-section/page";
-import SupportSection from "./components/support-section/page";
-import MapSection from "./components/map-section/page";
+import HeroSection from "./components/(pages)/home/hero-section/page";
+import StatsSection from "./components/(pages)/home/stats-section/page";
+import SupportSection from "./components/(pages)/home/support-section/page";
+import MapSection from "./components/(pages)/home/map-section/page";
 
 export default function Home() {
   return (

@@ -4,6 +4,7 @@ import SupportSection from "./components/(pages)/home/support-section/page";
 import MapSection from "./components/(pages)/home/map-section/page";
 import OperatingHours from "./components/(pages)/home/operating-hours/page";
 import Footer from "./components/footer/page";
+import ProductCarousel from "./components/product-carousel/page";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <SupportSection />
         <MapSection />
         <OperatingHours />
+        <ProductCarousel />
       </div>
         <Footer />
     </>

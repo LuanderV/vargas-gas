@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const HeroSection = () => {
   return (
-    <div className="relative min-h-screen flex items-center justify-between">
+    <div className="relative min-h-screen flex items-center justify-between py-8">
       {/* Left Side */}
       <div className="flex flex-col justify-center items-start max-w-lg">
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-800 leading-tight">

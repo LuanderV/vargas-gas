@@ -4,18 +4,18 @@ import SupportSection from "./components/(pages)/home/support-section/page";
 import MapSection from "./components/(pages)/home/map-section/page";
 import OperatingHours from "./components/(pages)/home/operating-hours/page";
 import Footer from "./components/footer/page";
-import ProductCarousel from "./components/product-carousel/page";
+import ProductCarousel from "./components/(pages)/home/product-carousel/page";
 
 export default function Home() {
   return (
     <>
-      <div className="bg-gradient-to-br from-green-100 via-white to-green-100 px-16">
+      <div className="px-16 max-w-5xl mx-auto">
         <HeroSection />
         <StatsSection />
+        <ProductCarousel />
         <SupportSection />
         <MapSection />
         <OperatingHours />
-        <ProductCarousel />
       </div>
         <Footer />
     </>

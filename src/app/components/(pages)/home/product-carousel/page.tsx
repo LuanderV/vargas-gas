@@ -7,7 +7,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination } from "swiper/modules";
 import Image from "next/image";
-import ButtonWhastApp from "../button-whatsapp/page";
+import ButtonWhastApp from "../../../button-whatsapp/page";
 
 interface Product {
   id: string;

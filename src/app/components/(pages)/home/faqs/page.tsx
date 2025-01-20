@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
+import { motion, AnimatePresence } from "framer-motion";
 
 const FAQs = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -40,14 +41,18 @@ const FAQs = () => {
 
   return (
     <section className="py-16 text-center">
-      <h2 className="text-3xl font-bold text-emerald-500 mb-8">
+      <h1 className="text-3xl font-bold text-emerald-500 mb-8">
         Perguntas Frequentes
-      </h2>
+      </h1>
       <div className="max-w-4xl mx-auto space-y-4">
         {faqItems.map((item, index) => (
-          <div
+          <motion.div
             key={index}
-            className="bg-white rounded-lg shadow-md p-6 transition-all border border-gray-200"
+            layout
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="bg-white rounded-lg shadow-md p-6 border border-gray-200"
           >
             <button
               onClick={() => toggleFAQ(index)}
@@ -60,10 +65,20 @@ const FAQs = () => {
                 <FaChevronDown size={20} className="text-emerald-800" />
               )}
             </button>
-            {activeIndex === index && (
-              <p className="mt-4 text-gray-600">{item.answer}</p>
-            )}
-          </div>
+            <AnimatePresence>
+              {activeIndex === index && (
+                <motion.p
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: "auto" }}
+                  exit={{ opacity: 0, height: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="mt-4 text-gray-600 overflow-hidden"
+                >
+                  {item.answer}
+                </motion.p>
+              )}
+            </AnimatePresence>
+          </motion.div>
         ))}
       </div>
     </section>

@@ -1,7 +1,7 @@
 const StatsSection = () => {
     return (
-      <div>
-        <div className="text-center py-8">
+      <div className="py-16">
+        <div className="text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-green-800 mb-8">
             Nossos Números Falam Por Nós
           </h2>
@@ -26,8 +26,8 @@ const StatsSection = () => {
   
             {/* Estatística 4 */}
             <div className="flex flex-col items-center">
-              <span className="text-4xl sm:text-5xl font-extrabold text-green-500">24/7</span>
-              <p className="mt-2 text-lg text-gray-600">Suporte e Entrega</p>
+              <span className="text-4xl sm:text-5xl font-extrabold text-green-500">+12 Anos</span>
+              <p className="mt-2 text-lg text-gray-600">No mercado</p>
             </div>
           </div>
         </div>

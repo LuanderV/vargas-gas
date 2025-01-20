@@ -4,7 +4,7 @@ const ButtonWhastApp = () => {
   return (
     <>
         {/* Botão de WhatsApp */}
-        <div className="text-center mt-8">
+        <div className="text-center mt-10">
           <a
             href="https://wa.me/5511999999999?text=Olá! Gostaria de fazer um pedido de gás."
             target="_blank"

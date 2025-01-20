@@ -21,14 +21,7 @@ const MapWithWhatsApp = () => {
             className="border-0"
           ></iframe>
         </div>
-
-        {/* Botão de WhatsApp */}
-        <div className="text-center mt-8">
-            <p className="text-gray-700 text-lg mb-4">
-                Não quer ir até o local? Sem problemas! Peça agora pelo WhatsApp e receba no conforto da sua casa.
-            </p>
             <ButtonWhastApp />
-        </div>
       </div>
     </div>
   );

@@ -25,12 +25,10 @@ export function ProductCarousel() {
       try {
         // Simulando um atraso e dados mockados
         const mockData: Product[] = [
-          { id: "1", name: "Gás de Cozinha 13kg", imageUrl: "/img/products/product1.jpg", price: "R$ 99,99" },
-          { id: "2", name: "Gás de Cozinha 45kg", imageUrl: "/img/products/product2.jpg", price: "R$ 129,99" },
-          { id: "3", name: "Gás de Cozinha 13kg Premium", imageUrl: "/img/products/product3.jpg", price: "R$ 149,99" },
-          { id: "4", name: "Gás para Indústria", imageUrl: "/img/products/product4.jpg", price: "R$ 79,99" },
-          { id: "5", name: "Gás para Comércio", imageUrl: "/img/products/product5.jpg", price: "R$ 199,99" },
-          { id: "6", name: "Gás de Cozinha 13kg Econômico", imageUrl: "/img/products/product6.jpg", price: "R$ 89,99" },
+          { id: "1", name: "Gás de Cozinha P13", imageUrl: "/img/product-carousel/P13.jpg", price: "R$ 140,99" },
+          { id: "2", name: "Galão de Agua 20L", imageUrl: "/img/product-carousel/agua20l.jpg", price: "R$ 19,99" },
+          { id: "3", name: "Carvão 3Kg", imageUrl: "/img/product-carousel/carvao.jpg", price: "R$ 20,00" },
+          { id: "4", name: "Carvão 5Kg", imageUrl: "/img/product-carousel/carvao.jpg", price: "R$ 25,00" },
         ];
         await new Promise((resolve) => setTimeout(resolve, 1000));
         setProducts(mockData);
@@ -43,7 +41,7 @@ export function ProductCarousel() {
 
   return (
     <section className="py-16 text-center">
-      <h2 className="text-3xl font-bold text-green-900 mb-8">Nossos Produtos de Gás</h2>
+      <h2 className="text-3xl font-bold text-green-900 mb-8">Nossos Produtos</h2>
       <Swiper
         modules={[Navigation, Pagination]}
         navigation

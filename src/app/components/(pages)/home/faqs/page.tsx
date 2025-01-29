@@ -40,42 +40,45 @@ const FAQs = () => {
   };
 
   return (
-    <section className="py-16 text-center">
-      <h1 className="text-3xl font-bold text-emerald-500 mb-8">
+    <section className="py-16 px-6 text-center bg-gray-50">
+      <h1 className="text-4xl font-bold text-emerald-800 mb-8">
         Perguntas Frequentes
       </h1>
-      <div className="max-w-4xl mx-auto space-y-4">
+      <div className="max-w-4xl mx-auto space-y-6">
         {faqItems.map((item, index) => (
           <motion.div
             key={index}
             layout
-            initial={{ opacity: 0, y: -20 }}
+            initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="bg-white rounded-lg shadow-md p-6 border border-gray-200"
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.3 }}
+            className="bg-white rounded-xl shadow-lg p-6 border border-gray-200 hover:shadow-xl transition-shadow duration-300"
           >
             <button
               onClick={() => toggleFAQ(index)}
-              className="flex justify-between items-center w-full text-left text-gray-700 focus:outline-none"
+              className="flex justify-between items-center w-full text-left text-gray-700 focus:outline-none hover:text-emerald-600 transition-colors duration-300"
             >
               <span className="text-lg font-medium">{item.question}</span>
               {activeIndex === index ? (
-                <FaChevronUp size={20} className="text-emerald-800" />
+                <FaChevronUp size={20} className="text-emerald-500 transition-all duration-300" />
               ) : (
-                <FaChevronDown size={20} className="text-emerald-800" />
+                <FaChevronDown size={20} className="text-gray-500 transition-all duration-300" />
               )}
             </button>
             <AnimatePresence>
               {activeIndex === index && (
-                <motion.p
+                <motion.div
                   initial={{ opacity: 0, height: 0 }}
                   animate={{ opacity: 1, height: "auto" }}
                   exit={{ opacity: 0, height: 0 }}
-                  transition={{ duration: 0.3 }}
+                  transition={{ duration: 0.4, ease: "easeInOut" }}
                   className="mt-4 text-gray-600 overflow-hidden"
                 >
-                  {item.answer}
-                </motion.p>
+                  <p className="p-3 border-l-4 border-emerald-400 bg-gray-100 rounded-md">
+                    {item.answer}
+                  </p>
+                </motion.div>
               )}
             </AnimatePresence>
           </motion.div>

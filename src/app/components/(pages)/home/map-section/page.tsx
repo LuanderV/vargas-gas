@@ -2,7 +2,7 @@ import ButtonWhastApp from "../../../button-whatsapp/page";
 
 const MapWithWhatsApp = () => {
   return (
-    <div className="py-16 px-8 sm:px-16 lg:px-24">
+    <div className="py-16 px-8 sm:px-16 lg:px-24 bg-gray-50">
       <div className="max-w-7xl mx-auto">
         {/* Título */}
         <h2 className="text-4xl sm:text-5xl font-extrabold text-green-800 text-center mb-12">

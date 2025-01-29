@@ -17,8 +17,8 @@ export default function Home() {
         <ProductCarousel />
         <MapSection />
         <OperatingHours />
-        <FAQs />
         <ContactSection />
+        <FAQs />
         <Footer />
     </>
   );

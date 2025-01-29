@@ -8,7 +8,7 @@ const ContactSection = () => {
   return (
     <footer className="relative py-16 bg-gray-900 text-white overflow-hidden">
       {/* Efeito Glassmorphism */}
-      <div className="absolute inset-0 bg-emerald-500 bg-opacity-20 backdrop-blur-md"></div>
+      <div className="absolute inset-0 bg-emerald-400 bg-opacity-20 backdrop-blur-md"></div>
 
       <motion.div
         className="relative max-w-4xl mx-auto text-center"
@@ -32,7 +32,7 @@ const ContactSection = () => {
               href="tel:32317088"
               className="text-emerald-400 font-semibold hover:underline"
             >
-              3231-7088
+              (53) 3231-7088
             </a>
           </div>
 

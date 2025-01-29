@@ -11,7 +11,6 @@ import Footer from "./components/footer/page";
 export default function Home() {
   return (
     <>
-      <div className="px-16 max-w-5xl mx-auto">
         <HeroSection />
         <StatsSection />
         <SupportSection />
@@ -20,7 +19,6 @@ export default function Home() {
         <OperatingHours />
         <FAQs />
         <ContactSection />
-      </div>
         <Footer />
     </>
   );

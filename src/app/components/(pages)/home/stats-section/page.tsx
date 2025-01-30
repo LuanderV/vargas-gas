@@ -1,39 +1,35 @@
-const StatsSection = () => {
-    return (
-      <div className="py-16">
-        <div className="text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-green-800 mb-8">
-            Nossos Números Falam Por Nós
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {/* Estatística 1 */}
-            <div className="flex flex-col items-center">
-              <span className="text-4xl sm:text-5xl font-extrabold text-green-500">+50.000</span>
-              <p className="mt-2 text-lg text-gray-600">Botijões de Gás Vendidos</p>
+"use client";
+
+import { TrendingUp, Users, Star, Briefcase } from "lucide-react";
+
+const mockStats = [
+  { value: "+50.000", label: "Botijões de Gás Vendidos", icon: <TrendingUp size={40} className="text-white" /> },
+  { value: "+10.000", label: "Clientes Satisfeitos", icon: <Users size={40} className="text-white" /> },
+  { value: "4.9/5.0", label: "Avaliação dos Clientes", icon: <Star size={40} className="text-white" /> },
+  { value: "+12 Anos", label: "No mercado", icon: <Briefcase size={40} className="text-white" /> },
+];
+
+const StatsSection: React.FC = () => {
+  return (
+    <div className="relative flex justify-center">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] max-w-5xl bg-white shadow-lg rounded-3xl p-6 sm:p-10 flex flex-col items-center bg-[url('/img/product-carousel/bg-green-gradient.jpg')] bg-cover bg-center bg-no-repeat">
+
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 w-full">
+          {mockStats.map((stat, index) => (
+            <div key={index} className="flex flex-col items-center">
+              {stat.icon}
+              <span className="text-3xl sm:text-4xl font-extrabold text-green-500 mt-2">
+                {stat.value}
+              </span>
+              <p className="mt-2 text-sm sm:text-lg text-white text-center">
+                {stat.label}
+              </p>
             </div>
-  
-            {/* Estatística 2 */}
-            <div className="flex flex-col items-center">
-              <span className="text-4xl sm:text-5xl font-extrabold text-green-500">+10.000</span>
-              <p className="mt-2 text-lg text-gray-600">Clientes Satisfeitos</p>
-            </div>
-  
-            {/* Estatística 3 */}
-            <div className="flex flex-col items-center">
-              <span className="text-4xl sm:text-5xl font-extrabold text-green-500">4.9/5.0</span>
-              <p className="mt-2 text-lg text-gray-600">Avaliação dos Clientes</p>
-            </div>
-  
-            {/* Estatística 4 */}
-            <div className="flex flex-col items-center">
-              <span className="text-4xl sm:text-5xl font-extrabold text-green-500">+12 Anos</span>
-              <p className="mt-2 text-lg text-gray-600">No mercado</p>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
-    );
-  };
-  
-  export default StatsSection;
-  
+    </div>
+  );
+};
+
+export default StatsSection;

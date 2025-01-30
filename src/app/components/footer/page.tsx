@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="relative shadow-lg shadow-emerald-500/50 p-4 text-center text-white bg-gray-900 overflow-hidden">
+    <footer className="relative shadow-lg shadow-emerald-500/50 p-4 text-center text-white bg-gray-900 overflow-hidden bg-[url('/img/product-carousel/bg-green.jpg')] bg-cover bg-center bg-no-repeat">
       {/* Efeito Glassmorphism */}
       <div className="absolute inset-0 bg-emerald-600 bg-opacity-30 backdrop-blur-lg"></div>
 

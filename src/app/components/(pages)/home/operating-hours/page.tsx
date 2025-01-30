@@ -14,8 +14,8 @@ const OperatingHours = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <div className="bg-white shadow-lg rounded-xl p-6 w-full max-w-sm">
-          <h2 className="text-2xl font-bold text-emerald-500 mb-6 flex items-center">
+        <div className="bg-[url('/img/product-carousel/bg-green-gradient.jpg')] bg-cover bg-center bg-no-repeat shadow-lg rounded-xl p-6 w-full max-w-sm">
+          <h2 className="text-2xl font-bold text-white mb-6 flex items-center">
             <motion.div
               className="mr-3 text-3xl text-emerald-600"
               animate={{ scale: [1, 1.1, 1] }} // Animação de escala suave
@@ -53,7 +53,7 @@ const OperatingHours = () => {
           alt="Horário de Funcionamento"
           width={400}
           height={300}
-          className="rounded-xl object-cover shadow-lg"
+          className="rounded-xl object-cover"
           priority
         />
       </motion.div>

@@ -3,7 +3,7 @@ import ButtonWhastApp from "../../../button-whatsapp/page";
 
 const HeroSection = () => {
   return (
-    <div className="relative flex items-center justify-between py-16">
+    <div className="relative flex items-center justify-between pt-16 pb-52">
       {/* Left Side */}
       <div className="flex flex-col text-center justify-center max-w-lg">
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-800 leading-tight">

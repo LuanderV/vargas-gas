@@ -13,35 +13,36 @@ interface Product {
   id: string;
   name: string;
   imageUrl: string;
-  price: string;
 }
 
 export default function ProductCarousel() {
   const [products, setProducts] = useState<Product[]>([]);
+  const [loading, setLoading] = useState(true);
 
-  // Simulação de carregamento de dados
   useEffect(() => {
-    const mockFetchData = async () => {
+    const fetchProducts = async () => {
       try {
-        // Simulando um atraso e dados mockados
         const mockData: Product[] = [
-          { id: "1", name: "Gás de Cozinha P13", imageUrl: "/img/product-carousel/P13.jpg", price: "R$ 140,99" },
-          { id: "2", name: "Galão de Agua 20L", imageUrl: "/img/product-carousel/agua20l.jpg", price: "R$ 19,99" },
-          { id: "3", name: "Carvão 3Kg", imageUrl: "/img/product-carousel/carvao.jpg", price: "R$ 20,00" },
-          { id: "4", name: "Carvão 5Kg", imageUrl: "/img/product-carousel/carvao.jpg", price: "R$ 25,00" },
+          { id: "1", name: "Gás de Cozinha P13", imageUrl: "/img/product-carousel/P13.jpg", },
+          { id: "2", name: "Galão de Água 20L", imageUrl: "/img/product-carousel/agua20l.jpg" },
+          { id: "3", name: "Carvão 3Kg", imageUrl: "/img/product-carousel/carvao.jpg" },
+          { id: "4", name: "Carvão 5Kg", imageUrl: "/img/product-carousel/carvao.jpg" },
         ];
         await new Promise((resolve) => setTimeout(resolve, 1000));
         setProducts(mockData);
       } catch (error) {
         console.error("Erro ao carregar produtos:", error);
+      } finally {
+        setLoading(false);
       }
     };
-    mockFetchData();
+    fetchProducts();
   }, []);
 
   return (
-    <section className="py-16 text-center">
-      <h2 className="text-3xl font-bold text-green-900 mb-8">Nossos Produtos</h2>
+    <section className="py-16 text-white text-center bg-[url('/img/product-carousel/bg-green-texture.jpg')] bg-cover bg-center bg-no-repeat"
+>
+      <h2 className="text-4xl font-bold mb-8">Nossos Produtos</h2>
       <Swiper
         modules={[Navigation, Pagination]}
         navigation
@@ -54,10 +55,14 @@ export default function ProductCarousel() {
         }}
         className="max-w-7xl mx-auto"
       >
-        {products.length > 0 ? (
+        {loading ? (
+          <SwiperSlide>
+            <p className="text-lg font-semibold">Carregando produtos...</p>
+          </SwiperSlide>
+        ) : (
           products.map((product) => (
             <SwiperSlide key={product.id}>
-              <div className="p-4 transition-all transform hover:scale-105 hover:shadow-xl rounded-md bg-white shadow-md">
+              <div className="p-2 rounded-xl bg-emerald-900/15 backdrop-blur-md shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl">
                 <Image
                   src={product.imageUrl}
                   alt={product.name}
@@ -66,18 +71,15 @@ export default function ProductCarousel() {
                   className="w-full h-64 object-cover rounded-md"
                   priority
                 />
-                <h3 className="mt-4 text-xl font-semibold text-gray-800">{product.name}</h3>
-                <p className="text-lg font-semibold text-green-600">{product.price}</p>
+                <h3 className="mt-4 text-2xl font-semibold text-white">{product.name}</h3>
               </div>
             </SwiperSlide>
           ))
-        ) : (
-          <SwiperSlide>
-            <p>Carregando produtos...</p>
-          </SwiperSlide>
         )}
       </Swiper>
-      <ButtonWhastApp />
+      <div className="mt-8">
+        <ButtonWhastApp />
+      </div>
     </section>
   );
 }

@@ -25,8 +25,7 @@ export default function ProductCarousel() {
         const mockData: Product[] = [
           { id: "1", name: "Gás de Cozinha P13", imageUrl: "/img/product-carousel/P13.jpg", },
           { id: "2", name: "Galão de Água 20L", imageUrl: "/img/product-carousel/agua20l.jpg" },
-          { id: "3", name: "Carvão 3Kg", imageUrl: "/img/product-carousel/carvao.jpg" },
-          { id: "4", name: "Carvão 5Kg", imageUrl: "/img/product-carousel/carvao.jpg" },
+          { id: "3", name: "Carvão", imageUrl: "/img/product-carousel/carvao.jpg" },
         ];
         await new Promise((resolve) => setTimeout(resolve, 1000));
         setProducts(mockData);
@@ -40,7 +39,7 @@ export default function ProductCarousel() {
   }, []);
 
   return (
-    <section className="py-16 text-white text-center bg-[url('/img/product-carousel/bg-green-texture.jpg')] bg-cover bg-center bg-no-repeat"
+    <section className="py-16 text-white text-center bg-[url('/img/product-carousel/bg-product.jpg')] bg-cover bg-center bg-no-repeat"
 >
       <h2 className="text-4xl font-bold mb-8">Nossos Produtos</h2>
       <Swiper
@@ -62,16 +61,16 @@ export default function ProductCarousel() {
         ) : (
           products.map((product) => (
             <SwiperSlide key={product.id}>
-              <div className="p-2 rounded-xl bg-emerald-900/15 backdrop-blur-md shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl">
+              <div className="p-2 rounded-xl bg-[url('/img/background/bg-green-abstract.jpg')] bg-cover bg-center bg-no-repeat backdrop-blur-md shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl">
                 <Image
                   src={product.imageUrl}
                   alt={product.name}
                   width={500}
                   height={500}
-                  className="w-full h-64 object-cover rounded-md"
+                  className="w-full h-64 object-cover rounded-md "
                   priority
                 />
-                <h3 className="mt-4 text-2xl font-semibold text-white">{product.name}</h3>
+                <h3 className="mt-4 text-2xl font-semibold text-white bg-[url('/img/background/bg-green-gradient.jpg')] bg-cover bg-center rounded-lg">{product.name}</h3>
               </div>
             </SwiperSlide>
           ))

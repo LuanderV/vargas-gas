@@ -6,7 +6,7 @@ import { FaPhone, FaWhatsapp } from "react-icons/fa6";
 
 const ContactSection = () => {
   return (
-    <footer className="relative py-16 bg-gray-900 text-white overflow-hidden bg-[url('/img/product-carousel/bg-green.jpg')] bg-cover bg-center bg-no-repeat">
+    <footer className="relative py-16 bg-gray-900 text-white overflow-hidden bg-[url('/img/background/bg-green.jpg')] bg-cover bg-center bg-no-repeat">
       {/* Efeito Glassmorphism */}
       <div className="absolute inset-0 bg-emerald-400 bg-opacity-20 backdrop-blur-md"></div>
 

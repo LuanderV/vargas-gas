@@ -14,7 +14,7 @@ const OperatingHours = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <div className="bg-[url('/img/product-carousel/bg-green-gradient.jpg')] bg-cover bg-center bg-no-repeat shadow-lg rounded-xl p-6 w-full max-w-sm">
+        <div className="bg-[url('/img/background/bg-green-gradient.jpg')] bg-cover bg-center bg-no-repeat shadow-lg rounded-xl p-6 w-full max-w-sm">
           <h2 className="text-2xl font-bold text-white mb-6 flex items-center">
             <motion.div
               className="mr-3 text-3xl text-emerald-600"

@@ -7,6 +7,7 @@ import OperatingHours from "./components/(pages)/home/operating-hours/page";
 import ContactSection from "./components/(pages)/home/contact-section/page";
 import FAQs from "./components/(pages)/home/faqs/page";
 import Footer from "./components/footer/page";
+import TrophiesCarousel from "./components/(pages)/home/trophies-carousel/page";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <StatsSection />
         <SupportSection />
         <ProductCarousel />
+        <TrophiesCarousel />
         <MapSection />
         <OperatingHours />
         <ContactSection />

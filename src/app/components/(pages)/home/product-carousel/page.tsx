@@ -16,7 +16,7 @@ interface Product {
   price: string;
 }
 
-export function ProductCarousel() {
+export default function ProductCarousel() {
   const [products, setProducts] = useState<Product[]>([]);
 
   // Simulação de carregamento de dados
@@ -81,5 +81,3 @@ export function ProductCarousel() {
     </section>
   );
 }
-
-export default ProductCarousel;

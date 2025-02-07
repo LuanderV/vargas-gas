@@ -8,7 +8,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-// Lista de troféus (pode vir de uma API futuramente)
+// Lista de troféus
 const trophies = [
   {
     id: 1,

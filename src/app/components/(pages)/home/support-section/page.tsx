@@ -2,7 +2,7 @@ import { FaCheckCircle, FaTruck, FaShieldAlt, FaSmile, FaLeaf, FaHeadset } from 
 
 const SupportSection = () => {
   return (
-    <div className="pb-16 pt-52">
+    <div className="pb-16 pt-52 bg-gray-50 px-6">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl sm:text-5xl font-extrabold text-green-800 text-center mb-12">
           Por que escolher nosso gás?

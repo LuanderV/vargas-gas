@@ -13,7 +13,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body>
+      <body className="max-w-[1200px] mx-auto px-4 bg-[url('/img/background/bg-body.jpg')] bg-cover">
         {children}
       </body>
     </html>

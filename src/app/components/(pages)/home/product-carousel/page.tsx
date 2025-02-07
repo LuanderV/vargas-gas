@@ -39,45 +39,47 @@ export default function ProductCarousel() {
   }, []);
 
   return (
-    <section className="py-16 text-white text-center bg-[url('/img/product-carousel/bg-product.jpg')] bg-cover bg-center bg-no-repeat"
->
-      <h2 className="text-4xl font-bold mb-8">Nossos Produtos</h2>
-      <Swiper
-        modules={[Navigation, Pagination]}
-        navigation
-        pagination={{ clickable: true }}
-        spaceBetween={20}
-        slidesPerView={1}
-        breakpoints={{
-          640: { slidesPerView: 2 },
-          1024: { slidesPerView: 3 },
-        }}
-        className="max-w-7xl mx-auto"
-      >
-        {loading ? (
-          <SwiperSlide>
-            <p className="text-lg font-semibold">Carregando produtos...</p>
-          </SwiperSlide>
-        ) : (
-          products.map((product) => (
-            <SwiperSlide key={product.id}>
-              <div className="p-2 rounded-xl bg-[url('/img/background/bg-green-abstract.jpg')] bg-cover bg-center bg-no-repeat backdrop-blur-md shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl">
-                <Image
-                  src={product.imageUrl}
-                  alt={product.name}
-                  width={500}
-                  height={500}
-                  className="w-full h-64 object-cover rounded-md "
-                  priority
-                />
-                <h3 className="mt-4 text-2xl font-semibold text-white bg-[url('/img/background/bg-green-gradient.jpg')] bg-cover bg-center rounded-lg">{product.name}</h3>
-              </div>
+    <section className="py-16 bg-gray-50 text-white text-center px-6">
+      <div className="bg-[url('/img/product-carousel/bg-product.jpg')] bg-cover bg-center bg-no-repeat p-6 rounded-lg"
+  >
+        <h2 className="text-4xl font-bold mb-8">Nossos Produtos</h2>
+        <Swiper
+          modules={[Navigation, Pagination]}
+          navigation
+          pagination={{ clickable: true }}
+          spaceBetween={20}
+          slidesPerView={1}
+          breakpoints={{
+            640: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+          }}
+          className="max-w-7xl mx-auto"
+        >
+          {loading ? (
+            <SwiperSlide>
+              <p className="text-lg font-semibold">Carregando produtos...</p>
             </SwiperSlide>
-          ))
-        )}
-      </Swiper>
-      <div className="mt-8">
-        <ButtonWhastApp />
+          ) : (
+            products.map((product) => (
+              <SwiperSlide key={product.id}>
+                <div className="p-2 rounded-xl bg-[url('/img/background/bg-green-abstract.jpg')] bg-cover bg-center bg-no-repeat backdrop-blur-md shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl">
+                  <Image
+                    src={product.imageUrl}
+                    alt={product.name}
+                    width={500}
+                    height={500}
+                    className="w-full h-64 object-cover rounded-md "
+                    priority
+                  />
+                  <h3 className="mt-4 text-2xl font-semibold text-white bg-[url('/img/background/bg-green-gradient.jpg')] bg-cover bg-center rounded-lg">{product.name}</h3>
+                </div>
+              </SwiperSlide>
+            ))
+          )}
+        </Swiper>
+        <div className="mt-8">
+          <ButtonWhastApp />
+        </div>
       </div>
     </section>
   );

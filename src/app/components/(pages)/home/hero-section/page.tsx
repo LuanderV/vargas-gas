@@ -6,7 +6,8 @@ import ButtonWhastApp from "../../../button-whatsapp/page";
 
 const HeroSection = () => {
   return (
-    <div className="relative flex flex-col md:flex-row items-center justify-between pt-16 pb-52 px-6">
+    <div className="relative flex flex-col md:flex-row items-center justify-between pt-16 pb-52 px-6 bg-gradient-to-b from-emerald-50 to-gray-50">
+
       {/* Left Side */}
       <motion.div 
         initial={{ opacity: 0, x: -50 }} 

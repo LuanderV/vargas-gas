@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 const OperatingHours = () => {
   return (
-    <section className="py-16 px-6 flex flex-col md:flex-row items-center justify-center gap-10 bg-gray-50 rounded-xl">
+    <section className="py-16 px-6 flex flex-col md:flex-row items-center justify-center gap-10 bg-gradient-to-t from-emerald-50 to-gray-50">
       {/* Horário de Funcionamento */}
       <motion.div 
         className="w-full md:w-1/2 flex justify-center"

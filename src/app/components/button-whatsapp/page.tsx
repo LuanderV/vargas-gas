@@ -7,7 +7,7 @@ const ButtonWhatsApp = () => {
   return (
     <div className="text-center mt-10">
       <motion.a
-        href="https://wa.me/5511999999999?text=Olá! Gostaria de fazer um pedido de gás."
+        href="https://wa.me/53981284497?text=Olá! Gostaria de fazer um pedido de gás."
         target="_blank"
         rel="noopener noreferrer"
         className="inline-flex items-center justify-center px-6 py-3 text-white bg-green-600 font-bold text-lg rounded-lg shadow-lg transition-all duration-300 relative overflow-hidden"
